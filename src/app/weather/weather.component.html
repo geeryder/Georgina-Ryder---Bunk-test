@@ -1,3 +1,32 @@
-<p>
-  weather works!
-</p>
+
+<h1>Check out the Weather</h1>
+<div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="" alt="Card image cap">
+    <div class="card-body">
+      <h3 class="card-title">{{londonWeather?.name}}</h3>
+      <h6>Humidity: {{londonWeather?.main.humidity}}%</h6>
+      <h6>Min Temp : {{londonWeather?.main.temp_min - 273.15}} &deg;C</h6>
+      <h6>Max Temp : {{londonWeather?.main.temp_max - 273.15}} &deg;C</h6>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h3 class="card-title">{{bristolWeather?.name}}</h3>
+      <h6>Humidity: {{bristolWeather?.main.humidity}}%</h6>
+      <h6>Min Temp : {{bristolWeather?.main.temp_min - 273.15}} &deg;C</h6>
+      <h6>Max Temp : {{bristolWeather?.main.temp_max - 273.15}} &deg;C</h6>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h3 class="card-title">{{romeWeather?.name}}</h3>
+      <h6>Humidity: {{romeWeather?.main.humidity}}%</h6>
+      <h6>Min Temp : {{romeWeather?.main.temp_min - 273.15}} &deg;C</h6>
+      <h6>Max Temp : {{romeWeather?.main.temp_max - 273.15}} &deg;C</h6>
+    </div>
+  </div>
+</div>
+

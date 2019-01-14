@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 export interface IWeather {
@@ -14,18 +13,34 @@ export interface IWeather {
   providedIn: 'root'
 })
 export class WeatherService {
-  url:string;
-  apiKey:string = "f4bbeb8ec1a8fb95591f2cf112aaa575";
-
+  londonUrl:string;
+  bristolUrl: string;
+  romeUrl: string;
+  
   constructor(
     private http: HttpClient
-  ) {
-    this.url= "http://api.openweathermap.org/data/2.5/weather?id="
-   }
+    ) {
+      this.londonUrl= "http://api.openweathermap.org/data/2.5/weather?id=2643744&appid=f4bbeb8ec1a8fb95591f2cf112aaa575";
+      this.bristolUrl= "http://api.openweathermap.org/data/2.5/weather?id=4749005&appid=f4bbeb8ec1a8fb95591f2cf112aaa575"
+      this.romeUrl= "http://api.openweathermap.org/data/2.5/weather?id=4219762&appid=f4bbeb8ec1a8fb95591f2cf112aaa575"
+      
+    }
 
-  getWeather(id:string){
-    return this.http.get<IWeather>(this.url + id + "&APPID=" + this.apiKey);
+    getLondonWeather(){
+      let londonWeather = this.http.get<IWeather>(this.londonUrl);
+      return londonWeather;
+    }
+    
+    getBristolWeather(){
+      let bristolWeather = this.http.get<IWeather>(this.bristolUrl);
+      return bristolWeather;
+    }
+    
+    getRomeWeather(){
+      let romeWeather = this.http.get<IWeather>(this.romeUrl);
+      return romeWeather;
+    }
+    
+    
   }
-
-
-}
+  
