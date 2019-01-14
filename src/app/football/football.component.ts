@@ -9,7 +9,10 @@ import * as footballers from '../../assets/footballers.json';
 })
 export class FootballComponent implements OnInit {
   footballers;
-  defenderArray = [];
+  defenders = [];
+  goalkeepers =[];
+  midfielders = [];
+  attacker =[];
 
 
   constructor() { 
@@ -20,10 +23,19 @@ export class FootballComponent implements OnInit {
   sortPlayers(footballers){
     for (let footballer = 0; footballer < footballers.length; footballer++) {
       if (footballers[footballer].position == "Defender"){
-        this.defenderArray.push(footballers[footballer]);
+        this.defenders.push(footballers[footballer]);
       }
-    }
+      else if (footballers[footballer].position =="Midfielder"){
+        this.midfielders.push(footballers[footballer]);
+      }
+      else if (footballers[footballer].position =="Attacker"){
+        this.attacker.push(footballers[footballer]);
+      }
+      else if (footballers[footballer].position =="Goalkeeper"){
+        this.goalkeepers.push(footballers[footballer]);
   }
+}
+}
 
   ngOnInit() {
   }
