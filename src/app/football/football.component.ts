@@ -14,6 +14,11 @@ export class FootballComponent implements OnInit {
   midfielders = [];
   attacker =[];
 
+  selectedGoalkeeper =[];
+  selectedAttacker =[];
+  selectedMidfielder =[];
+  selectedDefenders = [];
+
 
   constructor() { 
     this.footballers = footballers.default
@@ -34,6 +39,28 @@ export class FootballComponent implements OnInit {
       else if (footballers[footballer].position =="Goalkeeper"){
         this.goalkeepers.push(footballers[footballer]);
   }
+}
+}
+
+addGoalkeeper(footballer){
+  if(this.selectedGoalkeeper.length < 1){
+    this.selectedGoalkeeper.push(footballer);
+  }
+}
+
+addAttacker(footballer){
+  if(this.selectedAttacker.length < 3){
+  this.selectedAttacker.push(footballer);
+  }
+}
+addMidfielder(footballer){
+  if(this.selectedAttacker.length < 4){
+  this.selectedMidfielder.push(footballer);
+}
+}
+addDefender(footballer){
+  if(this.selectedAttacker.length < 3){
+  this.selectedDefenders.push(footballer);
 }
 }
 
