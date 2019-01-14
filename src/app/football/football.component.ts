@@ -49,17 +49,17 @@ addGoalkeeper(footballer){
 }
 
 addAttacker(footballer){
-  if(this.selectedAttacker.length < 3){
+  if( !(this.selectedAttacker.includes(footballer)) && this.selectedAttacker.length < 3){
   this.selectedAttacker.push(footballer);
   }
 }
 addMidfielder(footballer){
-  if(this.selectedAttacker.length < 4){
+  if(this.selectedMidfielder.length < 4){
   this.selectedMidfielder.push(footballer);
 }
 }
 addDefender(footballer){
-  if(this.selectedAttacker.length < 3){
+  if(this.selectedDefenders.length < 3){
   this.selectedDefenders.push(footballer);
 }
 }
