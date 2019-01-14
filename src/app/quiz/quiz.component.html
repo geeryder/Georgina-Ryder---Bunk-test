@@ -6,7 +6,7 @@
         Between your feet and shoes
     </h3>
     
-    <form #sockForm="ngForm" (ngSubmit)="validate(sockForm.value); sockForm.reset()" class="form-inline">
+    <form  class="form-inline">
         <div class="form-group mx-sm-3 mb-2">
             <input
             #socks="ngModel"
@@ -15,10 +15,13 @@
             required
             maxLength="5" 
             type="text" 
-            placeholder="What could i be?">
+            placeholder="What could i be?"
+            pattern="socks">
         </div>
-        <button type="submit" class="btn bg-warning mb-2">Click here to win!</button>
-        <small *ngIf="socks.invalid">Nope, try again </small>
+        
+        <h2 *ngIf="socks.invalid">Nope, try again </h2>
+        <h2 *ngIf="socks.valid">Wooohoo!! you rock </h2>
+
 
     </form>
 </div>

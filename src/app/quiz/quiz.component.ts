@@ -7,12 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuizComponent implements OnInit {
   
-  
-  validate(sockForm){
-    if (sockForm == "socks"){
-      return true;
-    }
-  }
   constructor() { }
 
   ngOnInit() {
