@@ -6,7 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quiz.component.scss']
 })
 export class QuizComponent implements OnInit {
-
+  
+  
+  validate(sockForm){
+    if (sockForm == "socks"){
+      return true;
+    }
+  }
   constructor() { }
 
   ngOnInit() {
