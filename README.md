@@ -1,27 +1,17 @@
-# Georigna
+# Georigna Ryder's Bunk challenge
+Hey Harry & Tom, 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.7.
+I completed to MVP within 5 hours however there would be some future improvements i would do if i had longer...
+- With the general code there is a lot of repetition that i would of liked to refactorrefactor, this is mostly aimed at my football competent file, I would have one function for adding a player and abstract this into a service so it was re usable. Within my weather service I hard coded the URL which could be separated into ID, APPID and API key then I would have been able to re use the function. 
+-	The overall styling could do with some work in terms of layout and empty spaces especially within the weather app, it would have been nice to of added icons to each place. 
+-	With the football layout, I would like to make the team the main focus, and have a different colour when the player is selected.
 
-## Development server
+Thanks for your time!
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
