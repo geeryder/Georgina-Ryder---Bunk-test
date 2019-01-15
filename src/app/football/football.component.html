@@ -1,54 +1,74 @@
 <h1>Football crazy</h1>
-
+<h6> Build your ideal Borussia Mönchengladbach starting eleven.</h6>
+<ul>
+  <li>A team can have no more than 1 Goalkeeper</li>
+  <li>The starting eleven needs to include 3 Defenders, 4 Midfielders, 3 Attackers.</li>
+</ul>
 <div class="row">
-  <div class="col-sm">
+  <div class="col-sm positions">
     
     <h3> Goalkeepers </h3>
     <div class="m-3 r-1" *ngFor = "let footballer of goalkeepers">
-    <button type="button" class="btn btn-warning" (click)= "addGoalkeeper(footballer)">{{footballer.name}}</button>
+      <button type="button" class="btn btn-warning" (click)= "addGoalkeeper(footballer)">{{footballer.name}}</button>
+    </div>
+    <h3> Attackers </h3>
+    <div class="m-3 r-2"  *ngFor = "let footballer of attacker">
+      <button type="button" class="btn btn-primary"(click)= "addAttacker(footballer)">{{footballer.name}}</button>
+    </div> 
+  </div>
+  
+  
+  
+  
+  <div class="col-sm positions">
+    <h3>Midfielders</h3>
+    <div class="m-3" *ngFor = "let footballer of midfielders">
+      <button type="button" class="btn btn-info" (click)="addMidfielder(footballer)">{{footballer.name}}</button>
+    </div>
+  </div>
+  
+  <div class="col-sm positions">
+    <h3> Defenders </h3>
+    <div class="m-3" *ngFor = "let footballer of defenders">
+      <button type="button" class="btn btn-danger"  (click)="addDefender(footballer)"> {{footballer.name}}</button>
+    </div>
+  </div>
+  
+  
+  <div class="col-sm">
+    <h3>Your Pick </h3>
+    
+    <h5>Goalkeepers</h5>
+    <div *ngFor=" let footballer of selectedGoalkeeper">
+      <div class="playerIcon"></div>
+      <p>{{footballer.name}}</p>
     </div>
     
-  </div>
-  <div class="col-sm">
-  <h3> Attacker </h3>
-  <div class="m-3 r-2"  *ngFor = "let footballer of attacker">
-  <button type="button" class="btn btn-primary"(click)= "addAttacker(footballer)">{{footballer.name}}</button>
-  </div>
-</div>
+    <h5>Attackers</h5>
+
+    <div class="row">
+      
+      <div *ngFor=" let footballer of selectedAttacker">
+        <div class="playerIcon"></div>
+        <p>{{footballer.name}}</p>
+      </div>
+    </div>
+
+    <h5>Midfielders</h5>
+    <div class="row">
+    
+      <div *ngFor=" let footballer of selectedMidfielder">
+        <div class="playerIcon"></div>
+        <p>{{footballer.name}}</p>
+      </div>
+    </div>
+    <h5>Defenders</h5>
+<div class="row">
   
-<div class="col-sm">
-  <h3>Midfielders</h3>
-  <div class="m-3" *ngFor = "let footballer of midfielders">
-  <button type="button" class="btn btn-info" (click)="addMidfielder(footballer)">{{footballer.name}}</button>
+      <div *ngFor=" let footballer of selectedDefenders">
+        <div class="playerIcon"></div>
+        <p>{{footballer.name}}</p>
+      </div>
+</div>
   </div>
 </div>
-  
-<div class="col-sm">
-  <h3> Defenders </h3>
-  <div class="m-3" *ngFor = "let footballer of defenders">
-  <button type="button" class="btn btn-danger"  (click)="addDefender(footballer)"> {{footballer.name}}</button>
-  </div>
-</div>
-</div>
-
-<h1>Your Pick </h1>
-<h2>Goalkeepers</h2>
-<div *ngFor=" let footballer of selectedGoalkeeper">
-  <p>{{footballer.name}}</p>
-</div>
-
-
-<h2>Attacker</h2>
-<div *ngFor=" let footballer of selectedAttacker">
-    <p>{{footballer.name}}</p>
-  </div>
-
-<h2>Midfielders</h2>
-<div *ngFor=" let footballer of selectedMidfielder">
-    <p>{{footballer.name}}</p>
-  </div>
-
-<h2>Defenders</h2>
-<div *ngFor=" let footballer of selectedDefenders">
-    <p>{{footballer.name}}</p>
-  </div>

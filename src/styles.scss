@@ -1,9 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+
 body { 
-    margin: 10px;
+    margin: 0;
+
 }
 h1{
     text-align: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+nav{
+    background-color: #532cff;
+    color: white;
+    a{
+        color: white;
+    }
+    a:hover{
+        background-color:#2cc0ff;
+        border-radius: 10px;
+        color: white;
+    }
 }

@@ -54,12 +54,12 @@ addAttacker(footballer){
   }
 }
 addMidfielder(footballer){
-  if(this.selectedMidfielder.length < 4){
+  if( !(this.selectedMidfielder.includes(footballer)) && this.selectedMidfielder.length < 4){
   this.selectedMidfielder.push(footballer);
 }
 }
 addDefender(footballer){
-  if(this.selectedDefenders.length < 3){
+  if( !(this.selectedDefenders.includes(footballer)) &&  this.selectedDefenders.length < 3){
   this.selectedDefenders.push(footballer);
 }
 }
