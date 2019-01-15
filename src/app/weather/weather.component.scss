@@ -1,0 +1,34 @@
+.weatherBody{
+    background-image: url('../../assets/weather.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+}
+
+h6,h3{
+    text-align: center;
+}
+.jumbotron{
+    background-color: rgba(225,225,225, 0.4);
+    border-color: rgb(44,192,255);
+    border-radius: 100px;
+    width: 800px;
+     h1,h6{
+         color: black;
+     }
+
+}
+
+.card{
+    background-color: rgba(225,225,225, 0.4);
+    opacity: 0.8;
+    border-radius: 100px;
+    border-color: rgb(44,192,255);
+    h3,h6{
+        color: black;
+    }
+}
+

@@ -1,32 +1,37 @@
 <div class="weatherBody">
+  <div >
+    
+    <h1>Check out the Weather</h1>
   
-  <h1>Check out the Weather</h1>
-
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">{{bristolWeather?.name}}</h1>
-        <h6>Humidity: {{bristolWeather?.main.humidity}}%</h6>
-        <h6>Min Temp : {{bristolWeather?.main.temp_min - 273.15 | number: '1.1'}} &deg;C</h6>
-        <h6>Max Temp : {{bristolWeather?.main.temp_max - 273.15 | number: '1.1'}} &deg;C</h6>
-    </div>
-  </div>
-  <div class="card-group">
-    <div class="card p-5">
-      <div class="card-body">
-        <h3 class="card-title">{{londonWeather?.name}}</h3>
-        <h6>Humidity: {{londonWeather?.main.humidity}}%</h6>
-        <h6>Min Temp : {{londonWeather?.main.temp_min - 273.15 | number: '1.1'}} &deg;C</h6>
-        <h6>Max Temp : {{londonWeather?.main.temp_max - 273.15 | number: '1.1'}} &deg;C</h6>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">{{bristolWeather?.name}}</h1>
+        <h1>{{bristolWeather?.main.temp - 273.15 | number: '1.1'}} &deg;C</h1>
+          <h6>Humidity: {{bristolWeather?.main.humidity}}%</h6>
+          <h6>Min : {{bristolWeather?.main.temp_min - 273.15 | number: '1.1'}} &deg;C</h6>
+          <h6>Max : {{bristolWeather?.main.temp_max - 273.15 | number: '1.1'}} &deg;C</h6>
       </div>
     </div>
-    <div class="card p-5">
-      <div class="card-body">
-        <h3 class="card-title">{{romeWeather?.name}}</h3>
-        <h6>Humidity: {{romeWeather?.main.humidity}}%</h6>
-        <h6>Min Temp : {{romeWeather?.main.temp_min - 273.15 | number: '1.1'}} &deg;C</h6>
-        <h6>Max Temp : {{romeWeather?.main.temp_max - 273.15 | number: '1.1'}} &deg;C</h6>
+    <div class=" card-group">
+      <div class="card p-5">
+        <div class="card-body">
+          <h3 class="card-title">{{londonWeather?.name}}</h3>
+          <h3>{{londonWeather?.main.temp - 273.15 | number: '1.1'}} &deg;C</h3>
+          <h6>Humidity: {{londonWeather?.main.humidity}}%</h6>
+          <h6>Min : {{londonWeather?.main.temp_min - 273.15 | number: '1.1'}} &deg;C</h6>
+          <h6>Max : {{londonWeather?.main.temp_max - 273.15 | number: '1.1'}} &deg;C</h6>
+        </div>
+      </div>
+      <div class=" card p-5">
+        <div class=" m-3 card-bodycard-body">
+          <h3 class="card-title">{{romeWeather?.name}}</h3>
+          <h3>{{romeWeather?.main.temp - 273.15 | number: '1.1'}} &deg;C</h3>
+          <h6>Humidity: {{romeWeather?.main.humidity}}%</h6>
+          <h6>Min : {{romeWeather?.main.temp_min - 273.15 | number: '1.1'}} &deg;C</h6>
+          <h6>Max : {{romeWeather?.main.temp_max - 273.15 | number: '1.1'}} &deg;C</h6>
+        </div>
       </div>
     </div>
+    
   </div>
-  
 </div>

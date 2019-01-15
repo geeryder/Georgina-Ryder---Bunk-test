@@ -1,27 +1,30 @@
-<div class="sockImage">
-    <h1>Quiz time ! </h1>
-    <h3>I’m something that you wear
-        That always comes in twos
-        I provide a layer
-        Between your feet and shoes
-    </h3>
-    
-    <form  class="form-inline">
-        <div class="form-group mx-sm-3 mb-2">
-            <input
-            #socks="ngModel"
-            name="socks"
-            ngModel
-            required
-            maxLength="5" 
-            type="text" 
-            placeholder="What could i be?"
-            pattern="socks">
-        </div>
+
+    <div class="sockImage">
+            <div class="background">
+        <h1>Quiz time ! </h1>
+        <h3>I’m something that you wear,
+            that always comes in twos,
+            I provide a layer,
+            between your feet and shoes
+        </h3>
         
-        <h2 *ngIf="socks.invalid">Nope, try again </h2>
-        <h2 *ngIf="socks.valid">Wooohoo!! you rock </h2>
-
-
-    </form>
+        <form  class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+                <input
+                #socks="ngModel"
+                name="socks"
+                ngModel
+                required
+                maxLength="5" 
+                type="text" 
+                placeholder="What could i be?"
+                pattern="socks">
+            </div>
+            
+            <h2 *ngIf="socks.invalid">Nope, try again </h2>
+            <h2 *ngIf="socks.valid">Wooohoo!! you rock </h2>
+    
+    
+        </form>
+    </div>
 </div>
